@@ -1,0 +1,235 @@
+<div class="container mt-5">
+
+    <h2 class="titulo">
+
+        Catálogo de Videojuegos
+
+    </h2>
+
+    <input
+
+        class="form-control buscador"
+
+        [(ngModel)]="texto"
+
+        (input)="buscar()"
+
+        placeholder="Buscar videojuegos...">
+
+    <div class="categorias">
+
+        <button
+
+            class="btn-categoria"
+
+            *ngFor="let categoria of categorias"
+
+            (click)="seleccionarCategoria(categoria)"
+
+            [class.activa]="categoria==categoriaSeleccionada">
+
+            {{categoria}}
+
+        </button>
+
+    </div>
+
+    <div class="row">
+
+        <div
+
+            class="col-lg-3 col-md-6 mb-4"
+
+            *ngFor="let p of productosFiltrados">
+
+            <div class="card-producto">
+
+                <img
+
+                [src]="'https://localhost:7268/'+p.imagen">
+
+                <div class="contenido">
+
+                    <span class="categoria">
+
+                        {{p.categoria}}
+
+                    </span>
+
+                    <h4>
+
+                        {{p.nombre}}
+
+                    </h4>
+
+                    <p>
+
+                        {{p.descripcion}}
+
+                    </p>
+
+                    <h3>
+
+                        ${{p.precio}}
+
+                    </h3>
+
+                    <button class="btn btn-warning w-100">
+
+                        Comprar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <section class="beneficios mt-5">
+
+    <h2 class="titulo">
+        ¿Por qué comprar en GameStore?
+    </h2>
+
+    <div class="row">
+
+        <div class="col-md-3 mb-4">
+
+            <div class="beneficio-card">
+
+                <i class="bi bi-truck"></i>
+
+                <h4>Envío Rápido</h4>
+
+                <p>
+                    Recibe tus juegos en el menor tiempo posible.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-4">
+
+            <div class="beneficio-card">
+
+                <i class="bi bi-shield-check"></i>
+
+                <h4>Compra Segura</h4>
+
+                <p>
+                    Todos nuestros pagos están protegidos.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-4">
+
+            <div class="beneficio-card">
+
+                <i class="bi bi-controller"></i>
+
+                <h4>Productos Originales</h4>
+
+                <p>
+                    Juegos 100% originales para todas las plataformas.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-4">
+
+            <div class="beneficio-card">
+
+                <i class="bi bi-headset"></i>
+
+                <h4>Soporte 24/7</h4>
+
+                <p>
+                    Estamos disponibles para ayudarte cuando lo necesites.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</div>
+<footer id="contacto" class="footer mt-5">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <h3>🎮 GameStore</h3>
+
+                <p>
+                    Tu tienda favorita de videojuegos.
+                </p>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h4>Contacto</h4>
+
+                <p>
+
+                    <i class="bi bi-telephone"></i>
+
+                    (477) 123-4567
+
+                </p>
+
+                <p>
+
+                    <i class="bi bi-envelope"></i>
+
+                    gamestore@gmail.com
+
+                </p>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h4>Síguenos</h4>
+
+                <div class="redes">
+
+                    <i class="bi bi-facebook"></i>
+
+                    <i class="bi bi-instagram"></i>
+
+                    <i class="bi bi-twitter-x"></i>
+
+                    <i class="bi bi-youtube"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+
+            © 2026 GameStore | Todos los derechos reservados
+
+        </p>
+
+    </div>
+
+</footer>

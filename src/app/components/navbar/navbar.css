@@ -1,0 +1,41 @@
+.navbar-custom{
+
+    background:#121212;
+
+    border-bottom:4px solid #FFC107;
+
+}
+
+.logo{
+
+    font-size:28px;
+
+    color:#FFC107 !important;
+
+    font-weight:bold;
+
+}
+
+.logo i{
+
+    margin-right:10px;
+
+}
+
+.nav-link{
+
+    color:white !important;
+
+    margin-left:15px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.nav-link:hover{
+
+    color:#FFC107 !important;
+
+}

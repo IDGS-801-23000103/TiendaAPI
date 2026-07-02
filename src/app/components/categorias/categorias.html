@@ -1,0 +1,33 @@
+<section id="categorias" class="container mt-5">
+
+<h2 class="titulo">
+
+Categorías
+
+</h2>
+
+<div class="row">
+
+<div
+class="col-lg-2 col-md-4 col-6 mb-4"
+*ngFor="let c of categorias">
+
+<div
+class="categoria-card"
+(click)="seleccionar(c.nombre)">
+
+<i class="bi bi-controller"></i>
+
+<h5>
+
+{{c.nombre}}
+
+</h5>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
